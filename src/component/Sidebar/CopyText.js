@@ -1,10 +1,11 @@
-import React, { Component } from "react";
-import { observer, inject } from "mobx-react";
-import { message, Tooltip } from "antd";
+import React, {Component} from "react";
+import {observer, inject} from "mobx-react";
+import {message, Tooltip} from "antd";
 
-import { copySafari } from "../../utils/converter";
-import { LAYOUT_ID, ENTER_DELAY, LEAVE_DELAY } from "../../utils/constant";
+import {copySafari} from "../../utils/converter";
+import {LAYOUT_ID, ENTER_DELAY, LEAVE_DELAY} from "../../utils/constant";
 import SvgIcon from "../../icon";
+import "./CopyText.css";
 
 @inject("content")
 @inject("navbar")
@@ -27,15 +28,10 @@ class CopyText extends Component {
   };
 
   render() {
-
-    let style = {
-      height: "40px",
-      width: "40px"
-    }
     return (
       <Tooltip placement="left" mouseEnterDelay={ENTER_DELAY} mouseLeaveDelay={LEAVE_DELAY} title="仅复制">
-        <a id="nice-sidebar-wechat" className="nice-btn-wechat" onClick={this.copyText}>
-          <img style={style} src="/copy.svg" alt="description of image"></img>
+        <a id="nice-sidebar-copytext" className="nice-btn-copytext" onClick={this.copyText}>
+          <SvgIcon name="copyText" className="nice-btn-copytext-icon" />
         </a>
       </Tooltip>
     );

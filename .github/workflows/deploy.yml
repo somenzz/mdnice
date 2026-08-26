@@ -35,7 +35,6 @@ jobs:
 
       - name: Build static site
         env:
-          NODE_OPTIONS: "--openssl-legacy-provider"
           PUBLIC_URL: "./"
         run: yarn build
 

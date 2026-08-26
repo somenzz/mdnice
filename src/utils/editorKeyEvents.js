@@ -1,4 +1,4 @@
-import { message } from "antd";
+import {message} from "antd";
 import prettier from "prettier/standalone";
 import prettierMarkdown from "prettier/parser-markdown";
 
@@ -84,7 +84,6 @@ const handlePrettierDoc = (content) => {
   return prettierRes;
 };
 
-
 function addSpaces(text) {
   // Define regular expressions.
   const re1 = /([\p{Script=Han}]+)([a-zA-Z0-9]+)/gu;
@@ -101,7 +100,6 @@ function addSpaces(text) {
   return text;
 }
 
-
 export const formatDocOrg = (content, store) => {
   content = handlePrettierDoc(content);
   content = content.replace(/([\u4e00-\u9fa5])\$/g, "$1 $");
@@ -110,7 +108,6 @@ export const formatDocOrg = (content, store) => {
 
   message.success("格式化文档完成！");
 };
-
 
 export const formatDoc = (content, store) => {
   let text = handlePrettierDoc(content);

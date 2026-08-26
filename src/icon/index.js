@@ -2,6 +2,7 @@ import React from "react";
 
 import Copy from "./Copy";
 import Copy2 from "./Copy2";
+import CopyText from "./CopyText";
 import Down from "./Down";
 import Environment from "./Environment";
 import GitHub from "./GitHub";
@@ -26,6 +27,8 @@ export default (props) => {
       return <Copy {...props} />;
     case "copy2":
       return <Copy2 {...props} />;
+    case "copyText":
+      return <CopyText {...props} />;
     case "down":
       return <Down {...props} />;
     case "environment":

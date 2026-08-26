@@ -45,10 +45,11 @@ class AboutDialog extends Component {
             id="nice-about-dialog-star"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/mdnice/markdown-nice"
+            href="https://github.com/somenzz/mdnice"
+            aria-label="GitHub Stars"
             style={style.noBorder}
           >
-            <img alt="" style={style.img} src="https://badgen.net/github/stars/mdnice/markdown-nice" />
+            <img alt="GitHub Stars" style={style.img} src="https://badgen.net/github/stars/mdnice/markdown-nice" />
           </a>
         </h3>
 
@@ -58,8 +59,8 @@ class AboutDialog extends Component {
           如果你喜欢高效工具，欢迎扫左边图片关注公众号「Python七号」，扫右边图片添加微信好友回复「入群」拉你进入技术交流群。
         </p>
         <div style={{display: "flex", alignItems: "center"}}>
-          <img alt="公众号「Python七号」" style={style.leftImgWidth} src="/mp.jpeg" />
-          <img alt="个人微信somenzz-enjoy" style={style.rightImgWidth} src="/wechat.jpg" />
+          <img alt="公众号「Python七号」" style={style.leftImgWidth} src={`${process.env.PUBLIC_URL}/mp.jpeg`} />
+          <img alt="个人微信somenzz-enjoy" style={style.rightImgWidth} src={`${process.env.PUBLIC_URL}/wechat.jpg`} />
         </div>
       </Modal>
     );

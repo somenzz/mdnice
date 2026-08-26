@@ -11,6 +11,11 @@ process.on('unhandledRejection', err => {
   throw err;
 });
 
+// Polyfill for Node.js 17+ OpenSSL 3.0 md4 compatibility
+const crypto = require('crypto');
+const origCreateHash = crypto.createHash;
+crypto.createHash = algorithm => origCreateHash(algorithm === 'md4' ? 'sha256' : algorithm);
+
 // Ensure environment variables are read.
 require('../config/env');
 

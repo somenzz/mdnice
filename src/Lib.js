@@ -94,7 +94,7 @@ class Lib extends Component {
             icon={<SvgIcon name="smile" style={style.svgIcon} />}
             title="请使用 PC 端打开排版工具"
             subTitle="获取更多使用工具和编程技巧，请扫码关注公众号「Python七号」"
-            extra={<img alt="" style={{width: "100%"}} src="/mp.jpeg"/>}
+            extra={<img alt="" style={{width: "100%"}} src={`${process.env.PUBLIC_URL}/mp.jpeg`} />}
           />
         )}
       </Provider>

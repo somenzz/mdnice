@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import { observer, inject } from "mobx-react";
+import React, {Component} from "react";
+import {observer, inject} from "mobx-react";
 
-import { formatDocOrg } from "../../../utils/editorKeyEvents";
-import { hotKeys } from "../../../utils/hotkey";
+import {formatDocOrg} from "../../../utils/editorKeyEvents";
 
 import "../common.css";
 
@@ -10,7 +9,7 @@ import "../common.css";
 @observer
 class FormatOrg extends Component {
   handleFormat = () => {
-    const { content } = this.props.content;
+    const {content} = this.props.content;
     formatDocOrg(content, this.props.content);
   };
 

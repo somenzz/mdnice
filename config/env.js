@@ -1,5 +1,11 @@
 'use strict';
 
+// Polyfill for Node.js 17+ OpenSSL 3.0 md4 compatibility in Webpack 4
+const crypto = require('crypto');
+const origCreateHash = crypto.createHash;
+crypto.createHash = (algorithm, ...args) =>
+  origCreateHash(algorithm === 'md4' ? 'sha256' : algorithm, ...args);
+
 const fs = require('fs');
 const path = require('path');
 const paths = require('./paths');
